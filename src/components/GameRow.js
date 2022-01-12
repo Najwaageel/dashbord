@@ -18,7 +18,7 @@ function GameRow(props) {
         <img src={game.image} style={{ objectFit: "contain", height: "100px", width: "100%" }} />
       </td>
       <td>{game.price}</td>
-      {/* <td>{game.ratingAverage}</td> */}
+      
 
       <td>
         <Button variant="outline-info" className="me-2" onClick={() => setViewShow(true)}>

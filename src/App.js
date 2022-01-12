@@ -70,6 +70,7 @@ function App() {
       const gameBody = {
         name: form.elements.name.value,
         image: form.elements.image.value,
+        // video: form.elements.video.value,
         price: form.elements.price.value,
       }
       await axios.put(`http://localhost:5000/api/games/${gameId}`, gameBody, {
@@ -92,6 +93,7 @@ function App() {
       const gameBody = {
         name: form.elements.name.value,
         image: form.elements.image.value,
+        // video: form.elements.video.value,
         price: form.elements.price.value,
       }
       await axios.post(`http://localhost:5000/api/games`, gameBody, {

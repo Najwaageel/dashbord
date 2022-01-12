@@ -4,7 +4,7 @@ import { Table } from "react-bootstrap"
 import GamesContext from "../utils/GamesContext"
 import GameAddModal from "../components/GameAddModal"
 import GameRow from "../components/GameRow"
-// import AddIcon from "@mui/icons-material/Add"
+
 
 function Games() {
 const { games } = useContext(GamesContext)
@@ -21,9 +21,9 @@ const [show, setShow] = useState(false)
     <Table>
       <thead>
         <tr>
-          <th style={{ width: "25%" }}> ID </th>
-          <th style={{ width: "15%" }}> Name </th>
-          <th style={{ width: "20%" }}> Image </th>
+          <th style={{ width: "20%" }}> ID </th>
+          <th style={{ width: "20%" }}> Name </th>
+          <th style={{ width: "15%" }}> Image </th>
           <th style={{ width: "15%" }}> Price </th>
           <th style={{ width: "35%" }}> Actions </th>
         </tr>

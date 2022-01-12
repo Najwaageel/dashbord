@@ -52,7 +52,7 @@ export default function PermanentDrawerLeft() {
             <ListItemIcon>
             <GiAbbotMeeple />
             </ListItemIcon>
-            <ListItemText primary="My Games dashboard" />
+            <ListItemText primary="My Disney Park dashboard" />
           </ListItem>
         </List>
 

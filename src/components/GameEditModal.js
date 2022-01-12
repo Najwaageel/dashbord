@@ -35,7 +35,6 @@ function GameEditModal(props) {
             </Col>
           </Form.Group>
 
-          
           <Form.Group as={Row} className="mb-3">
             <Form.Label column md="3">
               Price
