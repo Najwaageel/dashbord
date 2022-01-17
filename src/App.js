@@ -16,11 +16,11 @@ function App() {
   const navigate = useNavigate()
 
   const getGames = async () => {
-    const response = await axios.get("http://localhost:5000/api/games")
+    const response = await axios.get("https://park-api-final.herokuapp.com/api/games")
     setGames(response.data)
   }
   const getUsers = async () => {
-    const response = await axios.get("http://localhost:5000/api/auth/users", {
+    const response = await axios.get("https://park-api-final.herokuapp.com/api/auth/users", {
       headers: {
         Authorization: localStorage.tokenDashboard,
       },
@@ -33,7 +33,7 @@ function App() {
   }, [])
   const deleteGame = async gameId => {
     try {
-      await axios.delete(`http://localhost:5000/api/games/${gameId}`, {
+      await axios.delete(`https://park-api-final.herokuapp.com/api/games/${gameId}`, {
         headers: {
           Authorization: localStorage.tokenDashboard,
         },
@@ -53,7 +53,7 @@ function App() {
         email: form.elements.email.value,
         password: form.elements.password.value,
       }
-      const response = await axios.post("http://localhost:5000/api/auth/login/admin", adminBody)
+      const response = await axios.post("https://park-api-final.herokuapp.com/api/auth/login/admin", adminBody)
       localStorage.tokenDashboard = response.data
       toast.success("login success")
       navigate("/games")
@@ -73,7 +73,7 @@ function App() {
         // video: form.elements.video.value,
         price: form.elements.price.value,
       }
-      await axios.put(`http://localhost:5000/api/games/${gameId}`, gameBody, {
+      await axios.put(`https://park-api-final.herokuapp.com/api/games/${gameId}`, gameBody, {
         headers: {
           Authorization: localStorage.tokenDashboard,
         },
@@ -96,7 +96,7 @@ function App() {
         // video: form.elements.video.value,
         price: form.elements.price.value,
       }
-      await axios.post(`http://localhost:5000/api/games`, gameBody, {
+      await axios.post(`https://park-api-final.herokuapp.com/api/games`, gameBody, {
         headers: {
           Authorization: localStorage.tokenDashboard,
         },
@@ -110,9 +110,8 @@ function App() {
   }
   const logout = () => {
     localStorage.removeItem("tokenDashboard")
-  
   }
-  
+
   // --------------- هنا اضافةأدمن ممكن أحذفه
 
   const addAdmin = async e => {
@@ -127,7 +126,7 @@ function App() {
         password: form.elements.password.value,
         avatar: form.elements.avatar.value,
       }
-      await axios.post(`http://localhost:5000/api/auth/add-admin`, adminBody, {
+      await axios.post(`https://park-api-final.herokuapp.com/api/auth/add-admin`, adminBody, {
         headers: {
           Authorization: localStorage.tokenDashboard,
         },
@@ -141,7 +140,7 @@ function App() {
   }
   const deleteUser = async userId => {
     try {
-      await axios.delete(`http://localhost:5000/api/auth/users/${userId}`, {
+      await axios.delete(`https://park-api-final.herokuapp.com/api/auth/users/${userId}`, {
         headers: {
           Authorization: localStorage.tokenDashboard,
         },
